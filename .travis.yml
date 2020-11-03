@@ -12,7 +12,6 @@ script:
   - npm run build
   - echo "hk.xaked.com" > build/CNAME
   - cd ../api && echo "${HEROKU_LOGIN}" | base64 -d >> ~/.netrc
-  - cat ~/.netrc
   - git init
   - heroku git:remote -a api-mikkra
   - git add .
